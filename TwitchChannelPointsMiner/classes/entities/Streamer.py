@@ -125,7 +125,7 @@ class Streamer(object):
         self.toggle_chat()
 
         logger.info(
-            f"{self} is Offline!",
+            f"{self} está Offline!",
             extra={
                 "emoji": ":sleeping:",
                 "event": Events.STREAMER_OFFLINE,
@@ -141,7 +141,7 @@ class Streamer(object):
         self.toggle_chat()
 
         logger.info(
-            f"{self} is Online!",
+            f"{self} está Online!",
             extra={
                 "emoji": ":partying_face:",
                 "event": Events.STREAMER_ONLINE,
