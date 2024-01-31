@@ -256,7 +256,7 @@ class TwitchChannelPointsMiner:
                         streamers_dict[username] = username.lower().strip()
 
             logger.info(
-                f"Loading data for {len(streamers_name)} streamers. Please wait...",
+                f"Carregando dados de {len(streamers_name)} streamers. Aguarde...",
                 extra={"emoji": ":nerd_face:"},
             )
             for username in streamers_name:
@@ -445,14 +445,14 @@ class TwitchChannelPointsMiner:
     def __print_report(self):
         print("\n")
         logger.info(
-            f"Ending session: '{self.session_id}'", extra={"emoji": ":stop_sign:"}
+            f"Encerrando sessão: '{self.session_id}'", extra={"emoji": ":stop_sign:"}
         )
         if self.logs_file is not None:
             logger.info(
                 f"Logs file: {self.logs_file}", extra={"emoji": ":page_facing_up:"}
             )
         logger.info(
-            f"Duration {datetime.now() - self.start_datetime}",
+            f"Duração {datetime.now() - self.start_datetime}",
             extra={"emoji": ":hourglass:"},
         )
 
@@ -486,7 +486,7 @@ class TwitchChannelPointsMiner:
                     - self.original_streamers[streamer_index]
                 )
                 logger.info(
-                    f"{repr(self.streamers[streamer_index])}, Total Points Gained (after farming - before farming): {_millify(gained)}",
+                    f"{repr(self.streamers[streamer_index])}, Total de pontos obtidos (antes de farmar - depois de farmar): {_millify(gained)}",
                     extra={"emoji": ":robot:"},
                 )
                 if self.streamers[streamer_index].history != {}:
